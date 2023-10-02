@@ -77,12 +77,8 @@ WSGI_APPLICATION = 'Project.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'contactdb',  # Replace with your desired database name
-        'USER': 'root',
-        'PASSWORD': 'root',  # Replace with your desired password
-        'HOST': 'localhost',  # You can replace this with the MySQL server's host if it's not on the local machine
-        'PORT': '',  # Default MySQL port
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),  # Set the database file path
     }
 }
 
