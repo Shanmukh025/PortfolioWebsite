@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <link rel="icon" type="image/svg+xml" href="{% static './images/AS.png' %}">
+  <meta charset="UTF-8">
+  <title>My Projects</title>
+  <style>
+    .flexbox-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+    body {
+        background-image: url('https://img.freepik.com/free-vector/digital-marketing-online-public-relations-affairs-doodle-concept-businessman-with-megaphone-alert-advertising-campaign-propaganda-speech-pr-social-media-promotion-line-art-vector-illustration_107791-10969.jpg?w=2000');
+        background-position: center; /* Center the image */
+        background-size: cover;
+         font-family: 'Courier New', Courier, monospace;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+ .card-row {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center; /* Center cards horizontally within each row */
+      align-items: flex-start;
+    gap: 20px;
+    }
+
+
+    .card {
+      --font-color: #323232;
+      --bg-color: #e0e0e0;
+      width: 250px;
+      height: 350px;
+      border-radius: 20px;
+      background: var(--bg-color);
+      box-shadow: -9px 9px 18px #5a5a5a, 9px -9px 18px #ffffff;
+      display: flex;
+      flex-direction: column;
+      transition: .4s;
+      position: relative;
+    }
+    * {
+  box-sizing: border-box;
+}
+    .card:hover {
+      transform: scale(1.02);
+      box-shadow: 0px 0px 10px 2px #5a5a5a;
+    }
+    body {
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+}
+    .card__img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 20px 20px 0 0;
+      background-color: blueviolet;
+    }
+
+    .card__descr-wrapper {
+      padding: 10px;
+      display: grid;
+    }
+
+    .card__title {
+      color: var(--font-color);
+      text-align: center;
+      margin-bottom: -10px;
+      font-weight: 900;
+      font-size: 16px;
+    }
+
+    .card__descr {
+      color: var(--font-color);
+    }
+
+    .svg {
+      width: 25px;
+      height: 25px;
+      transform: translateY(25%);
+      fill: var(--font-color);
+    }
+
+    .card__links {
+      margin-top: 10px;
+      display: flex;
+      justify-content: space-between;
+      align-self: flex-end;
+    }
+
+    .card__links .link {
+      color: var(--font-color);
+      font-weight: 600;
+      font-size: 15px;
+      text-decoration: none;
+    }
+
+    .card__links .link:hover {
+      text-decoration: none;
+    }
+    .card__action {
+  position: absolute;
+  aspect-ratio: 1;
+  width: calc(var(--size) * 0.15);
+  bottom: 30%;
+  right: 1.5rem;
+  transform: translateY(50%)
+    translateY(
+      calc(
+        (var(--size) * 0.4)
+      )
+    )
+    translateY(calc(var(--hover, 0) * (var(--size) * -0.4)));
+  background: purple;
+  display: grid;
+  place-items: center;
+  border-radius: 0.5rem;
+  background: hsl(0 0% 100% / 0.5);
+/*   backdrop-filter: blur(calc(var(--blur) * 0.5)); */
+  transition: transform 0.2s;
+}
+@media (max-width: 768px) {
+  .card {
+    width: calc(50% - 20px);
+  }
+}
+
+@media (max-width: 480px) {
+  .card {
+    width: 100%;
+  }
+}
+span{
+    color: blue;
+}
+button {
+ display: flex;
+ height: 3em;
+ width: 80px;
+ align-items: center;
+ justify-content: center;
+ background-color: #eeeeee4b;
+ border-radius: 3px;
+ letter-spacing: 1px;
+ transition: all 0.2s linear;
+ cursor: pointer;
+ border: none;
+ z-index: 5;
+ top: 20px;
+ left: 20px;
+ position: fixed;
+   background: #1E90FF;
+    color: white;
+}
+.svg-white {
+  fill: white;
+}
+button > svg {
+ margin-right: 5px;
+ margin-left: 5px;
+ font-size: 20px;
+ transition: all 0.4s ease-in;
+}
+
+button:hover > svg {
+ font-size: 1.2em;
+ transform: translateX(-5px);
+}
+
+button:hover {
+ transform: translateY(-2px);
+}
+
+a{
+    text-decoration: none;
+}
+
+@media screen and (max-width: 600px) {
+      .flexbox-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+}
+
+@media screen and (max-width: 600px) {
+      .flexbox-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+}
+</style>
+</head>
+<div>
+    <div class="flexbox-container">
+    <a href="/Main"><button>
+        <svg class="svg-white" height="16" width="16" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 1024 1024"><path d="M874.690416 495.52477c0 11.2973-9.168824 20.466124-20.466124 20.466124l-604.773963 0 188.083679 188.083679c7.992021 7.992021 7.992021 20.947078 0 28.939099-4.001127 3.990894-9.240455 5.996574-14.46955 5.996574-5.239328 0-10.478655-1.995447-14.479783-5.996574l-223.00912-223.00912c-3.837398-3.837398-5.996574-9.046027-5.996574-14.46955 0-5.433756 2.159176-10.632151 5.996574-14.46955l223.019353-223.029586c7.992021-7.992021 20.957311-7.992021 28.949332 0 7.992021 8.002254 7.992021 20.957311 0 28.949332l-188.073446 188.073446 604.753497 0C865.521592 475.058646 874.690416 484.217237 874.690416 495.52477z"></path></svg>
+        Back
+      </button>
+      </a>
+      <div class="flexbox-item1">
+<div class="card-row">
+
+    <div class="card">
+        <div class="card__img" style="background-image: url('https://image.isu.pub/191205082104-8d735d371f916d163aa4a38eacf86b3e/jpg/page_1.jpg');background-size: cover;"></div>
+      <div class="card__descr-wrapper">
+        <p class="card__title">
+            <strong><span>Food and Hospitality using MERN.</span></strong>
+      </p>
+      <p class="card__descr">
+        An efficient online food ordering and management system.<br>
+        <strong>•React.js •Node.js<br>•MongoDB •Express.js</strong>
+      </p>
+      <div class="card__links">
+            <span class="card__action"></span>
+        <div><a class="link" href="https://hospitalityinsights.ehl.edu/hospitality-management" target="_blank">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512" class="svg">&lt;<path d="M562.8 267.7c56.5-56.5 56.5-148 0-204.5c-50-50-128.8-56.5-186.3-15.4l-1.6 1.1c-14.4 10.3-17.7 30.3-7.4 44.6s30.3 17.7 44.6 7.4l1.6-1.1c32.1-22.9 76-19.3 103.8 8.6c31.5 31.5 31.5 82.5 0 114L405.3 334.8c-31.5 31.5-82.5 31.5-114 0c-27.9-27.9-31.5-71.8-8.6-103.8l1.1-1.6c10.3-14.4 6.9-34.4-7.4-44.6s-34.4-6.9-44.6 7.4l-1.1 1.6C189.5 251.2 196 330 246 380c56.5 56.5 148 56.5 204.5 0L562.8 267.7zM43.2 244.3c-56.5 56.5-56.5 148 0 204.5c50 50 128.8 56.5 186.3 15.4l1.6-1.1c14.4-10.3 17.7-30.3 7.4-44.6s-30.3-17.7-44.6-7.4l-1.6 1.1c-32.1 22.9-76 19.3-103.8-8.6C57 372 57 321 88.5 289.5L200.7 177.2c31.5-31.5 82.5-31.5 114 0c27.9 27.9 31.5 71.8 8.6 103.9l-1.1 1.6c-10.3 14.4-6.9 34.4 7.4 44.6s34.4 6.9 44.6-7.4l1.1-1.6C416.5 260.8 410 182 360 132c-56.5-56.5-148-56.5-204.5 0L43.2 244.3z"></path></svg>
+          <span>Info</span></a>
+        </div>
+        <div><a class="link" href="https://github.com/Shanmukh025/FHS_MSWD" target="_blank">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512" class="svg"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg>
+          <span>Code</span></a>
+        </div>
+      </div>
+      </div>
+    </div>
+
+  <div class="card">
+    <div class="card__img" style="background-image: url('data:image/jpeg;base64,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');background-size: cover;"></div>
+    <div class="card__descr-wrapper">
+      <p class="card__title"><strong><span>Loans Management System with Django.</span></strong></p>
+      <p class="card__descr">
+        An efficient online system, which's used to manage loans.<br>
+        <strong>•Django •Flask<br> •Python •HTML/CSS</strong>
+    </p>
+      <div class="card__links">
+        <span class="card__action"></span>
+        <div><a class="link" href="" target="_blank">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512" class="svg">&lt;<path d="M562.8 267.7c56.5-56.5 56.5-148 0-204.5c-50-50-128.8-56.5-186.3-15.4l-1.6 1.1c-14.4 10.3-17.7 30.3-7.4 44.6s30.3 17.7 44.6 7.4l1.6-1.1c32.1-22.9 76-19.3 103.8 8.6c31.5 31.5 31.5 82.5 0 114L405.3 334.8c-31.5 31.5-82.5 31.5-114 0c-27.9-27.9-31.5-71.8-8.6-103.8l1.1-1.6c10.3-14.4 6.9-34.4-7.4-44.6s-34.4-6.9-44.6 7.4l-1.1 1.6C189.5 251.2 196 330 246 380c56.5 56.5 148 56.5 204.5 0L562.8 267.7zM43.2 244.3c-56.5 56.5-56.5 148 0 204.5c50 50 128.8 56.5 186.3 15.4l1.6-1.1c14.4-10.3 17.7-30.3 7.4-44.6s-30.3-17.7-44.6-7.4l-1.6 1.1c-32.1 22.9-76 19.3-103.8-8.6C57 372 57 321 88.5 289.5L200.7 177.2c31.5-31.5 82.5-31.5 114 0c27.9 27.9 31.5 71.8 8.6 103.9l-1.1 1.6c-10.3 14.4-6.9 34.4 7.4 44.6s34.4 6.9 44.6-7.4l1.1-1.6C416.5 260.8 410 182 360 132c-56.5-56.5-148-56.5-204.5 0L43.2 244.3z"></path></svg>
+          <span>Visit</span></a>
+        </div>
+        <div><a class="link" href="https://github.com/Shanmukh025/MPBSystem" target="_blank">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512" class="svg"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z">
+          </path></svg>
+          <span>Code</span></a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+<div class="card">
+    <div class="card__img" style="background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ57IIfV2WZ4-ghNvoaa3DaSMi9kYWxntw58IHZsU1mbZTZBhzYQwdL4kxVVzpIGt-eSFY&usqp=CAU');background-size: cover;"></div>
+  <div class="card__descr-wrapper">
+    <p class="card__title">
+    <span><strong>E-Commerce Using Java Full Stack.</strong></span>
+  </p>
+  <p class="card__descr">
+    An e-commerce website, which allows user to buy/sell products.
+    <strong>•Spring •Hibernate<br>•Java •Microservices</strong>
+  </p>
+  <div class="card__links">
+        <span class="card__action"></span>
+    <div><a class="link" href="https://www.linkedin.com/pulse/e-commerce-supply-chain-management-system-shanmukh-anaparthi/?trackingId=10NuFuAqR%2F6YjBi%2B7A6%2BjA%3D%3D" target="_blank">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512" class="svg">&lt;<path d="M562.8 267.7c56.5-56.5 56.5-148 0-204.5c-50-50-128.8-56.5-186.3-15.4l-1.6 1.1c-14.4 10.3-17.7 30.3-7.4 44.6s30.3 17.7 44.6 7.4l1.6-1.1c32.1-22.9 76-19.3 103.8 8.6c31.5 31.5 31.5 82.5 0 114L405.3 334.8c-31.5 31.5-82.5 31.5-114 0c-27.9-27.9-31.5-71.8-8.6-103.8l1.1-1.6c10.3-14.4 6.9-34.4-7.4-44.6s-34.4-6.9-44.6 7.4l-1.1 1.6C189.5 251.2 196 330 246 380c56.5 56.5 148 56.5 204.5 0L562.8 267.7zM43.2 244.3c-56.5 56.5-56.5 148 0 204.5c50 50 128.8 56.5 186.3 15.4l1.6-1.1c14.4-10.3 17.7-30.3 7.4-44.6s-30.3-17.7-44.6-7.4l-1.6 1.1c-32.1 22.9-76 19.3-103.8-8.6C57 372 57 321 88.5 289.5L200.7 177.2c31.5-31.5 82.5-31.5 114 0c27.9 27.9 31.5 71.8 8.6 103.9l-1.1 1.6c-10.3 14.4-6.9 34.4 7.4 44.6s34.4 6.9 44.6-7.4l1.1-1.6C416.5 260.8 410 182 360 132c-56.5-56.5-148-56.5-204.5 0L43.2 244.3z"></path></svg>
+      <span>Info</span></a>
+    </div>
+    <div><a class="link" href="https://github.com/Shanmukh025/E-Commerce" target="_blank">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512" class="svg"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg>
+      <span>Code</span></a>
+    </div>
+  </div>
+  </div>
+</div>
+
+<div class="card">
+    <div class="card__img" style="background-image: url('https://designnotes.blog.gov.uk/wp-content/uploads/sites/53/2020/06/Portfolio-Desk.jpg');background-size: cover;"></div>
+  <div class="card__descr-wrapper">
+    <p class="card__title">
+    <span><strong>Portfolio Website.</strong></span>
+  </p>
+  <p class="card__descr">
+ Personal project for showcasing my skills, projects certifications & contacting me.<br>
+ <strong>•HTML/CSS •Django<br>•Javascript •MySQL</strong>
+
+</p>
+  <div class="card__links">
+        <span class="card__action"></span>
+    <div><a class="link" href="https://shanmukhanaparthi.pythonanywhere.com/" target="_blank">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512" class="svg">&lt;<path d="M562.8 267.7c56.5-56.5 56.5-148 0-204.5c-50-50-128.8-56.5-186.3-15.4l-1.6 1.1c-14.4 10.3-17.7 30.3-7.4 44.6s30.3 17.7 44.6 7.4l1.6-1.1c32.1-22.9 76-19.3 103.8 8.6c31.5 31.5 31.5 82.5 0 114L405.3 334.8c-31.5 31.5-82.5 31.5-114 0c-27.9-27.9-31.5-71.8-8.6-103.8l1.1-1.6c10.3-14.4 6.9-34.4-7.4-44.6s-34.4-6.9-44.6 7.4l-1.1 1.6C189.5 251.2 196 330 246 380c56.5 56.5 148 56.5 204.5 0L562.8 267.7zM43.2 244.3c-56.5 56.5-56.5 148 0 204.5c50 50 128.8 56.5 186.3 15.4l1.6-1.1c14.4-10.3 17.7-30.3 7.4-44.6s-30.3-17.7-44.6-7.4l-1.6 1.1c-32.1 22.9-76 19.3-103.8-8.6C57 372 57 321 88.5 289.5L200.7 177.2c31.5-31.5 82.5-31.5 114 0c27.9 27.9 31.5 71.8 8.6 103.9l-1.1 1.6c-10.3 14.4-6.9 34.4 7.4 44.6s34.4 6.9 44.6-7.4l1.1-1.6C416.5 260.8 410 182 360 132c-56.5-56.5-148-56.5-204.5 0L43.2 244.3z"></path></svg>
+      <span>Visit</span></a>
+    </div>
+    <div><a class="link" href="https://github.com/Shanmukh025/PortfolioWebsite" target="_blank">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512" class="svg"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg>
+      <span>Code</span></a>
+    </div>
+  </div>
+  </div>
+</div>
+
+<div class="card">
+    <div class="card__img" style="background-image: url('https://www.inviul.com/wp-content/uploads/2017/07/Selenium.png');background-size: cover;"></div>
+  <div class="card__descr-wrapper">
+    <p class="card__title">
+    <span><strong>Selenium Automation.</strong></span>
+  </p>
+  <p class="card__descr">
+    Selenium is used for web testing& automating applications.<br>
+    <strong>•Selenium •TestNG<br>•JUnit •Maven/Gradle </strong>
+</p>
+  <div class="card__links">
+        <span class="card__action"></span>
+    <div><a class="link" href="https://intellipaat.com/blog/tutorial/selenium-tutorial/introduction/#:~:text=Selenium%20is%20a%20tool%20for,browser%20testing%20across%20different%20browsers." target="_blank">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512" class="svg">&lt;<path d="M562.8 267.7c56.5-56.5 56.5-148 0-204.5c-50-50-128.8-56.5-186.3-15.4l-1.6 1.1c-14.4 10.3-17.7 30.3-7.4 44.6s30.3 17.7 44.6 7.4l1.6-1.1c32.1-22.9 76-19.3 103.8 8.6c31.5 31.5 31.5 82.5 0 114L405.3 334.8c-31.5 31.5-82.5 31.5-114 0c-27.9-27.9-31.5-71.8-8.6-103.8l1.1-1.6c10.3-14.4 6.9-34.4-7.4-44.6s-34.4-6.9-44.6 7.4l-1.1 1.6C189.5 251.2 196 330 246 380c56.5 56.5 148 56.5 204.5 0L562.8 267.7zM43.2 244.3c-56.5 56.5-56.5 148 0 204.5c50 50 128.8 56.5 186.3 15.4l1.6-1.1c14.4-10.3 17.7-30.3 7.4-44.6s-30.3-17.7-44.6-7.4l-1.6 1.1c-32.1 22.9-76 19.3-103.8-8.6C57 372 57 321 88.5 289.5L200.7 177.2c31.5-31.5 82.5-31.5 114 0c27.9 27.9 31.5 71.8 8.6 103.9l-1.1 1.6c-10.3 14.4-6.9 34.4 7.4 44.6s34.4 6.9 44.6-7.4l1.1-1.6C416.5 260.8 410 182 360 132c-56.5-56.5-148-56.5-204.5 0L43.2 244.3z"></path></svg>
+      <span>Info</span></a>
+    </div>
+    <div><a class="link" href="https://github.com/Shanmukh025/Selenium_Automation" target="_blank">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512" class="svg"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg>
+      <span>Code</span></a>
+    </div>
+  </div>
+  </div>
+</div>
+</div>
+</div>
+    </div>
+</html>

@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <link rel="icon" type="image/svg+xml" href="{% static './images/AS.png' %}">
+<meta charset="UTF-8">
+<title>Intern Shanmukh</title>
+<style>
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+.background {
+  background: url('https://t3.ftcdn.net/jpg/00/97/41/10/360_F_97411085_NBlnPVg5OxMO4E1K6WDGczjlJ2XkNQFb.jpg');
+  center top no-repeat #252746;
+  background-size: cover;
+  background-image: fixed;
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 0;
+  top: 0;
+  left: 0;
+}
+:root {
+  --purple: hsl(240, 80%, 89%);
+  --pink: hsl(0, 59%, 94%);
+  --light-bg: hsl(204, 37%, 92%);
+  --light-gray-bg: hsl(0, 0%, 94%);
+  --white: hsl(0, 0%, 100%);
+  --dark: hsl(0, 0%, 7%);
+  --text-gray: hsl(0, 0%, 30%);
+}
+
+body {
+  background: var(--light-bg);
+  font-family: "Space Grotesk", sans-serif;
+  color: var(--dark);
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  min-height: 100vh;
+}
+
+h3 {
+  font-size: 1.5em;
+  font-weight: 700;
+}
+
+p {
+  font-size: 1em;
+  line-height: 1.7;
+  font-weight: 300;
+  color: var(--text-gray);
+}
+
+.description {
+  white-space: wrap;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.wrap {
+  display: flex;
+  justify: space-between;
+  align-items: stretch;
+  width: 100%;
+  gap: 24px;
+  padding: 24px;
+  flex-wrap: wrap;
+}
+
+.box {
+    right: -150px;
+  display: flex;
+  flex-direction: column;
+  flex-basis: 100%;
+  position: relative;
+  padding: 24px;
+  background: #fff;
+}
+
+.box-top {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  gap: 12px;
+  margin-bottom: 36px;
+}
+
+.box-image {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+  object-position: 50% 20%;
+}
+
+.title-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.box-title {
+  border-left: 3px solid var(--purple);
+  padding-left: 12px;
+}
+
+.user-follow-info {
+  color: hsl(0, 0%, 60%);
+}
+
+.button {
+  display: block;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top: auto;
+  padding: 16px;
+  color: #000;
+  background: transparent;
+  box-shadow: 0px 0px 0px 1px black inset;
+  transition: background 0.4s ease;
+}
+
+.button:hover {
+  background: var(--purple);
+}
+
+.fill-one {
+  background: var(--light-bg);
+}
+
+.fill-two {
+  background: var(--pink);
+}
+
+/* RESPONSIVE QUERIES */
+
+@media (min-width: 320px) {
+  .title-flex {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: start;
+  }
+  .user-follow-info {
+    margin-top: 6px;
+  }
+}
+
+@media (min-width: 460px) {
+  .title-flex {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: start;
+  }
+  .user-follow-info {
+    margin-top: 6px;
+  }
+}
+
+@media (min-width: 640px) {
+  .box {
+    flex-basis: calc(50% - 12px);
+  }
+  .title-flex {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: start;
+  }
+  .user-follow-info {
+    margin-top: 6px;
+  }
+}
+
+@media (min-width: 840px) {
+  .title-flex {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: start;
+  }
+  .user-follow-info {
+    margin-top: 6px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .box {
+    flex-basis: calc(33.3% - 16px);
+  }
+  .title-flex {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: start;
+  }
+  .user-follow-info {
+    margin-top: 6px;
+  }
+}
+
+@media (min-width: 1100px) {
+  .box {
+    flex-basis: calc(25% - 18px);
+  }
+}
+.back-button {
+  display: inline-block;
+  text-decoration: none; /* Remove underlines for anchor tag */
+  z-index: 1;
+}
+.back-button > button {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+  display: flex;
+  height: 3em;
+  width: 80px;
+  align-items: center;
+  justify-content: center;
+  background-color: #333;
+  border-radius: 3px;
+  letter-spacing: 1px;
+  transition: all 0.2s linear;
+  cursor: pointer;
+  border: none;
+  background: #1E90FF;
+    color: white;
+}
+
+.back-button > button > svg {
+  margin-right: 5px;
+  margin-left: 5px;
+  font-size: 30px;
+  transition: all 0.4s ease-in;
+}
+
+.back-button:hover > button > svg {
+  font-size: 1.2em;
+  transform: translateX(-5px);
+}
+
+.back-button:hover > button {
+  transform: translateY(-2px);
+}
+
+a{
+    text-decoration: none;
+}
+.svg-white {
+  fill: white;
+}
+a{
+    text-decoration: none;
+}
+</style>
+</head>
+<body>
+<a href="/Main" class="back-button">
+  <button>
+    <svg height="25" width="20" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 1024 1024" class="svg-white">
+      <path d="M874.690416 495.52477c0 11.2973-9.168824 20.466124-20.466124 20.466124l-604.773963 0 188.083679 188.083679c7.992021 7.992021 7.992021 20.947078 0 28.939099-4.001127 3.990894-9.240455 5.996574-14.46955 5.996574-5.239328 0-10.478655-1.995447-14.479783-5.996574l-223.009120-223.00912c-3.837398-3.837398-5.996574-9.046027-5.996574-14.46955 0-5.433756 2.159176-10.632151 5.996574-14.46955l223.019353-223.029586c7.992021-7.992021 20.957311-7.992021 28.949332 0 7.992021 8.002254 7.992021 20.957311 0 28.949332l-188.073446 188.073446 604.753497 0C865.521592 475.058646 874.690416 484.217237 874.690416 495.52477z"></path>
+    </svg>
+    <span>Back</span>
+  </button>
+</a><div class="background"></div>
+<div class="wrap">
+  <div class="box">
+    <div class="box-top">
+      <img class="box-image" src="{% static './images/awscloud.png' %}" >
+      <div class="title-flex">
+        <h3 class="box-title">AWS CLOUD VIRTUAL INTERNSHIP</h3>
+        <p class="user-follow-info">Dec 2022 - Feb 2023</p>
+      </div>
+        <p class="description">This Internship is a unique opportunity to gain hands-on experience with AWS technologies, to develop skills in cloud computing, management and deployment.</p>
+      <a href="/aicte" class="button">View Certificate</a>
+    </div>
+  </div>
+  <!--
+  <div class="box">
+    <div class="box-top">
+      <img class="box-image" src="{% static './images/second_image.png' %}" >
+      <div class="title-flex">
+        <h3 class="box-title">SECOND INTERNSHIP</h3>
+        <p class="user-follow-info">Date Range</p>
+      </div>
+      <p class="description">Description of the second internship.Description of the second internship.Description of the second internship.Description of the second internship.</p>
+      <a href="/second_internship" class="button">View Certificate</a>
+    </div>
+  </div>
+  -->
+</div>
+</body>
+</html>

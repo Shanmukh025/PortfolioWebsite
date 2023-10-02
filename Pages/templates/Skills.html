@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/svg+xml" href="{% static './images/AS.png' %}">
+    <title>My Skills</title>
+    <style>
+* {margin: 0; padding: 0; outline: none;}
+
+body {
+  background: url('https://images.unsplash.com/photo-1517512006864-7edc3b933137?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fGRhcmslMjBjb2RlfGVufDB8fDB8fHww&w=1000&q=80')no-repeat center center fixed;
+    background-size: 100% 100%;
+  font: 12px normal Arial;
+  font-family: "Raleway",Arial,Helvetica,sans-serif;
+  color:#fff;
+}
+h2 {
+  font-size: 2.7em;
+  font-weight: normal;
+  padding: 10px 0 16px 0;
+  margin: 0 0 30px;
+  text-align:center;
+  color:#2187e7;
+  text-shadow: 1px 1px 5px #000, 0 0 10px #2187e7, 0 0 20px #2187e7;
+  background:#000;
+  border-radius:2px;
+  border: 1px solid #2187e7;
+  box-shadow: 0px 0px 50px -8px #2187e7;
+}
+h2.plataformas {
+  border: 1px solid #9ACD32;
+  box-shadow: 0px 0px 50px -8px #9ACD32;
+  color: #9ACD32;
+  text-shadow: 1px 1px 5px #000, 0 0 10px #9ACD32, 0 0 20px #9ACD32;
+}
+
+h2.programas {
+  border: 1px solid #FF4500;
+  box-shadow: 0px 0px 50px -8px #FF4500;
+  color: #FF4500;
+  text-shadow: 1px 1px 5px #000, 0 0 10px #FF4500, 0 0 20px #FF4500;
+}
+
+.container {
+  width: 90%;
+  padding:5%;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.col {
+  width: 23%;
+  margin: 0 5%;
+  position: relative;
+  float: left;
+  font-size: 12px;
+  line-height: 2em;
+  padding: 5% 0;
+}
+/*.col { width:101%; }*/
+.skill {
+  list-style:none;
+  padding-top:30px;
+}
+
+.skill li {
+  margin-bottom:70px;
+  background:#030303;
+  height:6px;
+  border-radius:3px;
+  border-left:1px solid #111;
+  border-top:1px solid #111;
+  border-right:1px solid #333;
+  border-bottom:1px solid #333;
+}
+
+.skill li em {
+  position:relative;
+  font-style: normal;
+  font-size: 20px;
+  text-align: center;
+  color:#dedede;
+  top:-28px;
+}
+
+.blueline {
+  height: 3px;
+  margin: 2px 0;
+  background: #2187e7;
+  position: absolute;
+  box-shadow: 0px 0px 10px 1px rgba(0,198,255,0.6);
+}
+.greenline {
+  height: 3px;
+  margin: 2px 0;
+  background: #9ACD32;
+  position: absolute;
+  box-shadow: 0px 0px 10px 1px rgba(173, 255, 47,0.4);
+}
+.redline {
+  height: 3px;
+  margin: 2px 0;
+  background: #FF4500;
+  position: absolute;
+  box-shadow: 0px 0px 10px 1px rgba(255, 69, 0,0.4);
+}
+
+.titulo      { opacity:1;  animation:titulo 5s ease-out;     }
+
+/*programacion*/
+.html        { width:90%;  animation:html 2s ease-out;       }
+.css         { width:95%;  animation:css 2s ease-out;        }
+.php         { width:70%;  animation:php 2s ease-out;        }
+.javascript  { width:65%;  animation:javascript 2s ease-out; }
+.jquery      { width:60%;  animation:jquery 2s ease-out;     }
+
+/*plataformas*/
+.wordpress   { width:85%;  animation:wordpress 2s ease-out;  }
+.prestashop  { width:70%;  animation:prestashop 2s ease-out; }
+.joomla      { width:60%;  animation:joomla 2s ease-out;     }
+.blogger     { width:80%;  animation:blogger 2s ease-out;    }
+.tridion      { width:50%;  animation:tridion 2s ease-out;     }
+
+/*programas*/
+.dreamweaver { width:85%;  animation:dreamweaver 2s ease-out;}
+.illustrator { width:65%;  animation:illustrator 2s ease-out;}
+.photoshop   { width:70%;  animation:photoshop 2s ease-out;  }
+.premiere    { width:80%;  animation:premiere 2s ease-out;   }
+.flash       { width:70%;  animation:flash 2s ease-out;      }
+
+
+@keyframes titulo      { 0% { opacity:0; } 100% { opacity:1; }  }
+
+/* Updated keyframes for all skills with ease-out */
+@keyframes java { 0% { width: 0px; } 100% { width: 85%; } }
+@keyframes python { 0% { width: 0px; } 100% { width: 50%; } }
+@keyframes cplusplus { 0% { width: 0px; } 100% { width: 80%; } }
+@keyframes c { 0% { width: 0px; } 100% { width: 65%; } }
+@keyframes ruby { 0% { width: 0px; } 100% { width: 30%; } }
+
+@keyframes html { 0% { width: 0px; } 100% { width: 90%; } }
+@keyframes react { 0% { width: 0px; } 100% { width: 75%; } }
+@keyframes css { 0% { width: 0px; } 100% { width: 80%; } }
+@keyframes php { 0% { width: 0px; } 100% { width: 60%; } }
+@keyframes javascript { 0% { width: 0px; } 100% { width: 65%; } }
+@keyframes jquery { 0% { width: 0px; } 100% { width: 60%; } }
+
+@keyframes git { 0% { width: 0px; } 100% { width: 80%; } }
+@keyframes sql { 0% { width: 0px; } 100% { width: 60%; } }
+@keyframes linux { 0% { width: 0px; } 100% { width: 75%; } }
+@keyframes ai { 0% { width: 0px; } 100% { width: 70%; } }
+@keyframes powerbi { 0% { width: 0px; } 100% { width: 70%; } }
+
+/* Apply ease-out to all animations */
+.col ul.skill li span,
+.col ul.skill li em {
+    animation-timing-function: ease-out;
+}
+
+/*media queries*/
+@media (max-width: 1200px){
+  h2 {font-size:2.2em;}
+}
+@media (max-width: 980px){
+  h2 {font-size:1.8em;}
+}
+@media (max-width: 767px){
+  h2 {font-size:1.4em;}
+}
+@media (max-width: 580px){
+  h2 {font-size:1.1em; padding:10px 0;}
+}
+@media (max-width: 480px){
+  h2 {font-size:2.2em; padding: 10px 0 15px 0;}
+  .col {width: 90%;}
+}
+
+
+.back-button > button {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+  display: flex;
+  height: 3em;
+  width: 80px;
+  align-items: center;
+  justify-content: center;
+  background-color: #333;
+  border-radius: 3px;
+  letter-spacing: 1px;
+  transition: all 0.2s linear;
+  cursor: pointer;
+  border: none;
+  background: #1E90FF;
+    color: white;
+}
+
+.back-button > button > svg {
+  margin-right: 5px;
+  margin-left: 5px;
+  font-size: 30px;
+  transition: all 0.4s ease-in;
+}
+
+.back-button:hover > button > svg {
+  font-size: 1.2em;
+  transform: translateX(-5px);
+}
+
+.back-button:hover > button {
+  transform: translateY(-2px);
+}
+
+a{
+    text-decoration: none;
+}
+.svg-white {
+  fill: white;
+}
+a{
+    text-decoration: none;
+}
+
+    </style>
+</head>
+<body>
+<a href="/Main" class="back-button">
+  <button>
+    <svg height="25" width="20" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 1024 1024" class="svg-white">
+      <path d="M874.690416 495.52477c0 11.2973-9.168824 20.466124-20.466124 20.466124l-604.773963 0 188.083679 188.083679c7.992021 7.992021 7.992021 20.947078 0 28.939099-4.001127 3.990894-9.240455 5.996574-14.46955 5.996574-5.239328 0-10.478655-1.995447-14.479783-5.996574l-223.009120-223.00912c-3.837398-3.837398-5.996574-9.046027-5.996574-14.46955 0-5.433756 2.159176-10.632151 5.996574-14.46955l223.019353-223.029586c7.992021-7.992021 20.957311-7.992021 28.949332 0 7.992021 8.002254 7.992021 20.957311 0 28.949332l-188.073446 188.073446 604.753497 0C865.521592 475.058646 874.690416 484.217237 874.690416 495.52477z"></path>
+    </svg>
+    <span>Back</span>
+  </button>
+</a>
+<div class="container">
+  <div class="col">
+    <h2 class="plataformas titulo">Programming</h2>
+    <ul class="skill">
+      <li><span class="greenline wordpress"></span><em style="width: 85%;">Java</em></li>
+      <li><span class="greenline blogger"></span><em style="width: 50%;">Python</em></li>
+      <li><span class="greenline prestashop"></span><em style="width: 80%;">C++</em></li>
+      <li><span class="greenline joomla"></span><em style="width: 65%;">C</em></li>
+      <li><span class="greenline tridion"></span><em style="width: 30%;">Ruby</em></li>
+    </ul>
+  </div>
+
+  <div class="col">
+    <h2 class="titulo">Frameworks</h2>
+    <ul class="skill">
+      <li><span class="blueline css"></span><em style="width: 90%;">Django</em></li>
+      <li><span class="blueline html"></span><em style="width: 85%;">HTML/CSS</em></li>
+      <li><span class="blueline php"></span><em style="width: 75%;">React.js</em></li>
+      <li><span class="blueline javascript"></span><em style="width: 80%;">Node.js</em></li>
+      <li><span class="blueline jquery"></span><em style="width: 60%;">PHP</em></li>
+    </ul>
+  </div>
+
+    <div class="col">
+    <h2 class="programas titulo">Tools</h2>
+    <ul class="skill">
+      <li><span class="redline dreamweaver"></span><em style="width: 80%;">Git/Github</em></li>
+            <li><span class="redline premiere"></span><em style="width: 60%;">SQL</em></li>
+      <li><span class="redline photoshop"></span><em style="width: 75%;">Linux</em></li>
+            <li><span class="redline illustrator"></span><em style="width: 70%;">A.I</em></li>
+      <li><span class="redline flash"></span><em style="width: 70%;">Power BI</em></li>
+    </ul>
+  </div>
+</div>
+</body>
+</html>

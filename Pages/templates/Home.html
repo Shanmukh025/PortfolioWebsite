@@ -1,0 +1,854 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en-GB">
+<head>
+<meta charSet="utf-8"/>
+<title>Shanmukh Anaparthi</title>
+<link rel="icon" type="image/svg+xml" href="{% static './images/AS.png' %}">
+<meta name="viewport" content="width=device-width"/><meta name="next-head-count" content="2"/><noscript data-n-css=""></noscript><link rel="preload" href="/_next/static/chunks/webpack-189c53927ffd3caf09c3.js" as="script"/><link rel="preload" href="/_next/static/chunks/framework-92300432a1172ef1338b.js" as="script"/><link rel="preload" href="/_next/static/chunks/main-71948af4b0f09c0fc30e.js" as="script"/><link rel="preload" href="/_next/static/chunks/pages/_app-17fed5ed89a7d7bd27ab.js" as="script"/><link rel="preload" href="/_next/static/chunks/d0447323-b06891957ca900cf0732.js" as="script"/><link rel="preload" href="/_next/static/chunks/95b64a6e-4837f896f516a58e8f77.js" as="script"/><link rel="preload" href="/_next/static/chunks/70b165ca-6858f40a5efdc30134e8.js" as="script"/><link rel="preload" href="/_next/static/chunks/d7eeaac4-f668b0e87dc99cc90532.js" as="script"/><link rel="preload" href="/_next/static/chunks/pages/index-43dd86133e34193b9513.js" as="script"/>
+<style data-styled="" data-styled-version="5.3.0">
+
+        hr {
+            box-sizing: content-box;
+            height: 0;
+            overflow: visible;
+        }
+        a {
+            background-color: transparent;
+        }
+        abbr[title] {
+            border-bottom: none;
+            -webkit-text-decoration: underline;
+            text-decoration: underline;
+            -webkit-text-decoration: underline dotted;
+            text-decoration: underline dotted;
+        }
+        code,
+        kbd,
+        sub,
+        sup {
+            line-height: 0;
+            position: relative;
+            vertical-align: baseline;
+        }
+        sub {
+            bottom: -0.25em;
+        }
+        sup {
+            top: -0.5em;
+        }
+        img {
+            border-style: none;
+        }
+        input,
+        optgroup,
+        select,
+        textarea {
+            line-height: 1.15;
+            margin: 0;
+        }
+        input {
+            overflow: visible;
+        }
+        select {
+            text-transform: none;
+        }
+        /*!sc*/
+        button,
+        [type="button"],
+        [type="reset"],
+        [type="submit"] {
+            -webkit-appearance: button;
+        }
+        button::-moz-focus-inner,
+        [type="button"]::-moz-focus-inner,
+        [type="reset"]::-moz-focus-inner,
+        [type="submit"]::-moz-focus-inner {
+            border-style: none;
+            padding: 0;
+        }
+        button:-moz-focusring,
+        [type="button"]:-moz-focusring,
+        [type="reset"]:-moz-focusring,
+        [type="submit"]:-moz-focusring {
+            outline: 1px dotted ButtonText;
+        }
+        fieldset {
+            padding: 0.35em 0.75em 0.625em;
+        }
+        legend {
+            box-sizing: border-box;
+            color: inherit;
+            display: table;
+            max-width: 100%;
+            padding: 0;
+            white-space: normal;
+        }
+        progress {
+            vertical-align: baseline;
+        }
+        textarea {
+            overflow: auto;
+        }
+        [type="checkbox"],
+        [type="radio"] {
+            box-sizing: border-box;
+            padding: 0;
+        }
+        [type="number"]::-webkit-inner-spin-button,
+        [type="number"]::-webkit-outer-spin-button {
+            height: auto;
+        }
+        [type="search"] {
+            -webkit-appearance: textfield;
+            outline-offset: -2px;
+        }
+        [type="search"]::-webkit-search-decoration {
+            -webkit-appearance: none;
+        }
+        ::-webkit-file-upload-button {
+            -webkit-appearance: button;
+        }
+        details {
+            display: block;
+        }
+        summary {
+            display: list-item;
+        }
+        template {
+            display: none;
+        }
+        [hidden] {
+            display: none;
+        }
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        html {
+            -webkit-scroll-behavior: smooth;
+            -moz-scroll-behavior: smooth;
+            -ms-scroll-behavior: smooth;
+            scroll-behavior: smooth;
+        }
+        body {
+            background: #0F1624;
+            color: hsl(204, 23.8%, 95.9%);
+            cursor: default;
+        }
+        /*!sc*/
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        /*!sc*/
+        a {
+            -webkit-text-decoration: none;
+            text-decoration: none;
+        }
+        /*!sc*/
+        li {
+            list-style: none;
+        }
+        /*!sc*/
+        .gCkvSW {
+            display: grid;
+            -webkit-flex-direction: column;
+            -ms-flex-direction: column;
+            flex-direction: column;
+            padding: 32px 48px 0;
+            margin: 0 auto;
+            max-width: 1040px;
+            box-sizing: content-box;
+            position: relative;
+            overflow: hidden;
+            grid-template-columns: 1fr 1fr;
+        }
+        html {
+            line-height: 1.15;
+            -webkit-text-size-adjust: 100%;
+        }
+        body {
+            margin: 0;
+        }
+        main {
+            display: block;
+        }
+.flexbox-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.flexbox-item{
+   /*border: 2px solid white;*/
+     margin: 30px;
+}
+.flexbox-item1{
+  margin-top:-30px;
+  margin-left: 80px;
+  width: 300px;
+  height: 400px;
+  text-align: center;
+  justify-content: center;
+}
+
+.flexbox-item2{
+  margin-top: -50px;
+  margin-left: 140px;
+  width: 630px;
+  height: 400px;
+  text-align: center;
+  justify-content: center;
+  text-align: right;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.flexbox-item3{
+    margin-top: 10px;
+    margin-right: 10rem;
+    width: 580px;
+    height: 150px;
+    align-items: center;
+    justify-content: center;
+}
+
+:root {
+  --card-height: 450px;
+  --card-width: calc(var(--card-height) / 1.5);
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #191c29;
+}
+
+
+.card {
+  width: var(--card-width);
+  height: var(--card-height);
+  position: relative;
+  top: -50px;
+  right:51px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  padding: 0 36px;
+  perspective: 2500px;
+  margin: 0 50px;
+  border-radius: 30px;
+}
+
+.cover-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+    box-shadow:  0 0 10px white;
+}
+
+.wrapper {
+  transition: all 0.5s;
+  position: absolute;
+  width: 100%;
+  z-index: -1;
+}
+
+.card:hover .wrapper {
+  transform: perspective(900px) translateY(-5%) rotateX(25deg) translateZ(0);
+  box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
+}
+
+.wrapper::before,
+.wrapper::after {
+  content: "";
+  opacity: 0;
+  width: 100%;
+  height: 80px;
+  transition: all 0.5s;
+  position: absolute;
+  left: 0;
+}
+.wrapper::before {
+  top: 0;
+  height: 100%;/*
+  background-image: linear-gradient(
+    to top,
+    transparent 46%,
+    rgba(12, 13, 19, 0.5) 68%,
+    rgba(12, 13, 19) 97%
+  );*/
+}
+.wrapper::after {
+  bottom: 0;
+  opacity: 1;/*
+  background-image: linear-gradient(
+    to bottom,
+    transparent 46%,
+    rgba(12, 13, 19, 0.5) 68%,
+    rgba(12, 13, 19) 97%
+  );*/
+}
+
+.card:hover .wrapper::before,
+.wrapper::after {
+  opacity: 1;
+}
+
+.card:hover .wrapper::after {
+  height: 120px;
+}
+.title {
+  width: 100%;
+  transition: transform 0.5s;
+}
+.card:hover .title {
+  transform: translate3d(0%, -50px, 100px);
+}
+
+.character {
+  width: 100%;
+  opacity: 0;
+  transition: all 0.5s;
+  position: absolute;
+  z-index: -1;
+}
+
+.card:hover .character {
+  opacity: 1;
+  transform: translate3d(0%, -10%, 100px);
+}
+.contact{
+  position: fixed;
+    top: 20px;
+    right: 20px;
+}
+body {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+* {
+  box-sizing: border-box;
+}
+
+@keyframes slidebg {
+  to {
+    background-position:20vw;
+  }
+}
+
+
+.resbutton {
+  position: relative;
+  top: 68px;
+  left: 125px;
+  --main-focus: #2d8cf0;
+  --font-color: #323232;
+  --bg-color-sub: #dedede;
+  --bg-color: #eee;
+  --main-color: #323232;
+  position: relative;
+  width: 130px;
+  height: 40px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  border: 2px solid var(--main-color);
+  background-color: var(--bg-color);
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: -40px;
+}
+
+.resbutton, .resbutton__icon, .resbutton__text {
+  transition: all 0.3s;
+}
+
+.resbutton .resbutton__text {
+  transform: translateX(17px);
+  color: var(--font-color);
+  font-weight: 700;
+  font-size: 17px;
+}
+
+.resbutton .resbutton__icon {
+  position: absolute;
+  transform: translateX(90px);
+  height: 100%;
+  width: 40px;
+  background-color: var(--bg-color-sub);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.resbutton .svg {
+  width: 20px;
+  fill: var(--main-color);
+}
+
+.resbutton:hover {
+  background: var(--bg-color);
+}
+
+.resbutton:hover .resbutton__text {
+  color: transparent;
+}
+
+.resbutton:hover .resbutton__icon {
+  width: 130px;
+  transform: translateX(0);
+}
+
+.resbutton:active {
+  transform: translate(3px, 3px);
+  box-shadow: 0px 0px var(--main-color);
+}
+
+.letsgo {
+  font-family: 'Roboto Mono', monospace;
+  position: relative;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+  padding-block: 0.5rem;
+  padding-inline: 1.25rem;
+  background-color: rgb(0 107 179);
+  border-radius: 9999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffff;
+  gap: 10px;
+  font-weight: bold;
+  border: 3px solid #ffffff4d;
+  outline: none;
+  overflow: hidden;
+  font-size: 15px;
+  top: 65px;
+  left: 300px;
+}
+
+.icon {
+  width: 24px;
+  height: 24px;
+  transition: all 0.3s ease-in-out;
+}
+
+.letsgo:hover {
+  transform: scale(1.05);
+  border-color: #fff9;
+}
+
+.letsgo:hover .icon {
+  transform: translate(4px);
+}
+
+.letsgo:hover::before {
+  animation: shine 1.5s ease-out infinite;
+}
+
+.letsgo::before {
+  content: "";
+  position: absolute;
+  width: 100px;
+  height: 100%;
+  background-image: linear-gradient(
+    120deg,
+    rgba(255, 255, 255, 0) 30%,
+    rgba(255, 255, 255, 0.8),
+    rgba(255, 255, 255, 0) 70%
+  );
+  top: 0;
+  left: -100px;
+  opacity: 0.6;
+}
+
+@keyframes shine {
+  0% {
+    left: -100px;
+  }
+
+  60% {
+    left: 100%;
+  }
+
+  to {
+    left: 100%;
+  }
+}
+a {
+    text-decoration: none;
+}
+
+body {
+       font-family: 'Roboto Mono', monospace;
+        height: 100vh;
+}
+
+.contact-button {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: #f2f2f2;
+    color: #333;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+    box-shadow:  0 0 20px white;
+}
+
+.contact-button img {
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+}
+.contact-button {
+    background-color: #f2f2f2;
+    color: #333;
+    transition: background-color 0.3s ease;
+}
+
+.contact-button:hover {
+    background-color: #4169E1;
+    color: #fff;
+    box-shadow:  0 0 20px #4169E1;
+
+}
+
+.resbutton, .rainbow {
+    font-family: 'Roboto Mono', monospace;
+    font-weight: bold;
+  flex: 1;
+  border: none;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+}
+span
+{
+color: #FFDEAD;
+}
+
+body, p, a {
+  color: white;
+}
+.textbody{
+    text-align: center;
+}
+@media screen and (max-width: 768px) {
+  .flexbox-container {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .flexbox-item {
+    margin: 15px auto;
+  }
+
+  .card {
+    margin-top: 35px;
+  }
+
+  body {
+    font-size: 14px;
+  }
+  .character{
+    margin-top: 30px;
+    }
+}
+
+@media screen and (max-width: 450px){
+    .flexbox-container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .card {
+    margin-top: 35px;
+  }
+  .flexbox-item1{
+  margin-top: 300px;
+  }
+}
+</style>
+</head>
+<body>
+<svg class="BgAnimation__svg" width="650" height="650" style="z-index: -3; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%);" viewBox="0 0 602 602" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <g opacity="0.15">
+        <path fill-rule="evenodd" clip-rule="evenodd"
+            d="M201.337 87.437C193.474 79.5738 180.725 79.5738 172.862 87.437L87.437 172.862C79.5739 180.725 79.5739 193.474 87.437 201.337L400.663 514.563C408.526 522.426 421.275 522.426 429.138 514.563L514.563 429.138C522.426 421.275 522.426 408.526 514.563 400.663L201.337 87.437ZM30.4869 115.912C-8.82897 155.228 -8.82897 218.972 30.4869 258.287L343.713 571.513C383.028 610.829 446.772 610.829 486.088 571.513L571.513 486.088C610.829 446.772 610.829 383.028 571.513 343.713L258.287 30.4869C218.972 -8.82896 155.228 -8.82896 115.912 30.4869L30.4869 115.912Z"
+            stroke="url(#paint0_radial)" id="path_0"></path>
+        <path
+            d="M514.563 201.337C522.426 193.474 522.426 180.725 514.563 172.862L429.138 87.437C421.275 79.5738 408.526 79.5739 400.663 87.437L358.098 130.002L301.148 73.0516L343.713 30.4869C383.028 -8.82896 446.772 -8.82896 486.088 30.4869L571.513 115.912C610.829 155.228 610.829 218.972 571.513 258.287L357.802 471.999L300.852 415.049L514.563 201.337Z"
+            stroke="url(#paint1_radial)" id="path_1"></path>
+        <path
+            d="M243.901 471.999L201.337 514.563C193.474 522.426 180.725 522.426 172.862 514.563L87.437 429.138C79.5739 421.275 79.5739 408.526 87.437 400.663L301.148 186.952L244.198 130.002L30.4869 343.713C-8.82897 383.028 -8.82897 446.772 30.4869 486.088L115.912 571.513C155.228 610.829 218.972 610.829 258.287 571.513L300.852 528.949L243.901 471.999Z"
+            stroke="url(#paint2_radial)" id="path_2"></path>
+    </g>
+    <ellipse cx="295.027" cy="193.118" transform="translate(-295.027 -193.118)" rx="1.07306"
+        ry="1.07433" fill="#945DD6">
+        <animateMotion dur="10s" repeatCount="indefinite" rotate="auto">
+            <mpath xlink:href="#path_2"></mpath>
+        </animateMotion>
+    </ellipse>
+    <path d="M294.685 193.474L268.932 219.258"
+        transform="translate(-294.685 -193.474) rotate(45 294.685 193.474)"
+        stroke="url(#paint3_linear)">
+        <animateMotion dur="10s" repeatCount="indefinite" rotate="auto">
+            <mpath xlink:href="#path_2"></mpath>
+        </animateMotion>
+    </path>
+    <ellipse cx="295.027" cy="193.118" transform="translate(-295.027 -193.118)" rx="1.07306"
+        ry="1.07433" fill="#46737">
+        <animateMotion dur="5s" begin="1" repeatCount="indefinite" rotate="auto">
+            <mpath xlink:href="#path_2"></mpath>
+        </animateMotion>
+    </ellipse>
+    <path d="M294.685 193.474L268.932 219.258"
+        transform="translate(-294.685 -193.474) rotate(45 294.685 193.474)"
+        stroke="url(#paint7_linear)">
+        <animateMotion dur="5s" begin="1" repeatCount="indefinite" rotate="auto">
+            <mpath xlink:href="#path_2"></mpath>
+        </animateMotion>
+    </path>
+    <ellipse cx="476.525" cy="363.313" rx="1.07433" ry="1.07306"
+        transform="translate(-476.525 -363.313) rotate(90 476.525 363.313)" fill="#945DD6">
+        <animateMotion dur="10s" repeatCount="indefinite" rotate="auto">
+            <mpath xlink:href="#path_0"></mpath>
+        </animateMotion>
+    </ellipse>
+    <path d="M476.171 362.952L450.417 337.168"
+        transform="translate(-476.525 -363.313) rotate(-45 476.171 362.952)"
+        stroke="url(#paint4_linear)">
+        <animateMotion dur="10s" repeatCount="indefinite" rotate="auto">
+            <mpath xlink:href="#path_0"></mpath>
+        </animateMotion>
+    </path>
+    <ellipse cx="382.164" cy="155.029" rx="1.07433" ry="1.07306"
+        transform="translate(-382.164 -155.029) rotate(90 382.164 155.029)" fill="#F46737">
+        <animateMotion dur="10s" begin="1" repeatCount="indefinite" rotate="auto">
+            <mpath xlink:href="#path_0"></mpath>
+        </animateMotion>
+    </ellipse>
+    <path d="M381.81 154.669L356.057 128.885"
+        transform="translate(-381.81 -154.669) rotate(-45 381.81 154.669)"
+        stroke="url(#paint5_linear)">
+        <animateMotion dur="10s" begin="1" repeatCount="indefinite" rotate="auto">
+            <mpath xlink:href="#path_0"></mpath>
+        </animateMotion>
+    </path>
+    <ellipse cx="333.324" cy="382.691" rx="1.07306" ry="1.07433"
+        transform="translate(-333.324 -382.691) rotate(-180 333.324 382.691)" fill="#F46737">
+        <animateMotion dur="5s" begin="0" repeatCount="indefinite" rotate="auto">
+            <mpath xlink:href="#path_1"></mpath>
+        </animateMotion>
+    </ellipse>
+    <path d="M333.667 382.335L359.42 356.551"
+        transform="scale(-1 1) translate(-333.667 -382.335) rotate(45 333.667 382.335)"
+        stroke="url(#paint6_linear)">
+        <animateMotion dur="5s" begin="0" repeatCount="indefinite" rotate="auto">
+            <mpath xlink:href="#path_1"></mpath>
+        </animateMotion>
+    </path>
+    <ellipse cx="165.524" cy="93.9596" rx="1.07306" ry="1.07433"
+        transform="translate(-165.524 -93.9596)" fill="#F46737">
+        <animateMotion dur="10s" begin="3" repeatCount="indefinite" rotate="auto">
+            <mpath xlink:href="#path_0"></mpath>
+        </animateMotion>
+    </ellipse>
+    <path d="M165.182 94.3159L139.429 120.1"
+        transform="translate(-165.182 -94.3159) rotate(45 165.182 94.3159)"
+        stroke="url(#paint7_linear)">
+        <animateMotion dur="10s" begin="3" repeatCount="indefinite" rotate="auto">
+            <mpath xlink:href="#path_0"></mpath>
+        </animateMotion>
+    </path>
+    <ellipse cx="476.525" cy="363.313" rx="1.07433" ry="1.07306"
+        transform="translate(-476.525 -363.313) rotate(90 476.525 363.313)" fill="#13ADC7">
+        <animateMotion dur="12s" begin="4" repeatCount="indefinite" rotate="auto">
+            <mpath xlink:href="#path_0"></mpath>
+        </animateMotion>
+    </ellipse>
+    <path d="M476.171 362.952L450.417 337.168"
+        transform="translate(-476.525 -363.313) rotate(-45 476.171 362.952)"
+        stroke="url(#paint11_linear)">
+        <animateMotion dur="12s" begin="4" repeatCount="indefinite" rotate="auto">
+            <mpath xlink:href="#path_0"></mpath>
+        </animateMotion>
+    </path>
+    <defs>
+        <radialGradient id="paint0_radial" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse"
+            gradientTransform="translate(301 301) rotate(90) scale(300)">
+            <stop offset="0.333333" stop-color="#FBFBFB"></stop>
+            <stop offset="1" stop-color="white" stop-opacity="0"></stop>
+        </radialGradient>
+        <radialGradient id="paint1_radial" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse"
+            gradientTransform="translate(301 301) rotate(90) scale(300)">
+            <stop offset="0.333333" stop-color="#FBFBFB"></stop>
+            <stop offset="1" stop-color="white" stop-opacity="0"></stop>
+        </radialGradient>
+        <radialGradient id="paint2_radial" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse"
+            gradientTransform="translate(301 301) rotate(90) scale(300)">
+            <stop offset="0.333333" stop-color="#FBFBFB"></stop>
+            <stop offset="1" stop-color="white" stop-opacity="0"></stop>
+        </radialGradient>
+        <linearGradient id="paint3_linear" x1="295.043" y1="193.116" x2="269.975" y2="218.154"
+            gradientUnits="userSpaceOnUse">
+            <stop stop-color="#945DD6"></stop>
+            <stop offset="1" stop-color="#945DD6" stop-opacity="0"></stop>
+        </linearGradient>
+        <linearGradient id="paint4_linear" x1="476.529" y1="363.31" x2="451.461" y2="338.272"
+            gradientUnits="userSpaceOnUse">
+            <stop stop-color="#945DD6"></stop>
+            <stop offset="1" stop-color="#945DD6" stop-opacity="0"></stop>
+        </linearGradient>
+        <linearGradient id="paint5_linear" x1="382.168" y1="155.027" x2="357.1" y2="129.989"
+            gradientUnits="userSpaceOnUse">
+            <stop stop-color="#F46737"></stop>
+            <stop offset="1" stop-color="#F46737" stop-opacity="0"></stop>
+        </linearGradient>
+        <linearGradient id="paint6_linear" x1="333.309" y1="382.693" x2="358.376" y2="357.655"
+            gradientUnits="userSpaceOnUse">
+            <stop stop-color="#F46737"></stop>
+            <stop offset="1" stop-color="#F46737" stop-opacity="0"></stop>
+        </linearGradient>
+        <linearGradient id="paint7_linear" x1="165.54" y1="93.9578" x2="140.472" y2="118.996"
+            gradientUnits="userSpaceOnUse">
+            <stop stop-color="#F46737"></stop>
+            <stop offset="1" stop-color="#F46737" stop-opacity="0"></stop>
+        </linearGradient>
+        <linearGradient id="paint8_linear" x1="414.367" y1="301.156" x2="439.435" y2="276.118"
+            gradientUnits="userSpaceOnUse">
+            <stop stop-color="#13ADC7"></stop>
+            <stop offset="1" stop-color="#13ADC7" stop-opacity="0"></stop>
+        </linearGradient>
+        <linearGradient id="paint9_linear" x1="515.943" y1="288.238" x2="541.339" y2="291.454"
+            gradientUnits="userSpaceOnUse">
+            <stop stop-color="#13ADC7"></stop>
+            <stop offset="1" stop-color="#13ADC7" stop-opacity="0"></stop>
+        </linearGradient>
+        <linearGradient id="paint10_linear" x1="117.001" y1="230.619" x2="117.36" y2="258.193"
+            gradientUnits="userSpaceOnUse">
+            <stop stop-color="#945DD6"></stop>
+            <stop offset="1" stop-color="#945DD6" stop-opacity="0"></stop>
+        </linearGradient>
+        <linearGradient id="paint11_linear" x1="476.529" y1="363.31" x2="451.461" y2="338.272"
+            gradientUnits="userSpaceOnUse">
+            <stop stop-color="#13ADC7"></stop>
+            <stop offset="1" stop-color="#13ADC7" stop-opacity="0"></stop>
+        </linearGradient>
+    </defs>
+</svg>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.1/css/simple-line-icons.css" />
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@200&display=swap" rel="stylesheet" />
+
+    <div class="flexbox-container">
+      <div class="flexbox-item flexbox-item1">
+        <a href="https://www.linkedin.com/in/shanmukh-anaparthi" target="_blank">
+          <div class="card">
+            <div class="wrapper">
+              <img src="{% static './images/Shanmukhpy.jpg' %}" class="cover-image" />
+            </div>
+            <img src="{% static './images/name.png' %}" class="title" />
+            <img src="{% static './images/removedbg.png' %}" class="character" />
+          </div>
+        </a>
+      </div>
+      <div class="flexbox-item flexbox-item2">
+
+        <p class="textbody">
+          <script src="https://cdn.lordicon.com/bhenfmcm.js"></script>
+          <lord-icon
+              src="https://cdn.lordicon.com/gqqykmqo.json"
+              trigger="hover"
+              colors="outline:#121331,primary:#646e78,secondary:#ad6836,tertiary:#4faef9,quaternary:#f3c3ba"
+              style="width:60px;height:60px">
+          </lord-icon>SHANMUKH ANAPARTHI
+          <script src="https://cdn.lordicon.com/bhenfmcm.js"></script>
+          <a href="mailto:shanmukh2564@gmail.com">
+          <lord-icon
+              src="https://cdn.lordicon.com/gzmgulpl.json"
+              trigger="hover"
+              colors="outline:#121331,primary:#4bb3fd,secondary:#ebe6ef"
+              style="width:70px;height:70px">
+          </lord-icon>shanmukh2564@gmail.com</a><br>
+
+           <lord-icon
+              src="https://cdn.lordicon.com/fihkmkwt.json"
+              trigger="hover"
+              colors="primary:#121331,secondary:#4bb3fd"
+              style="width:50px;height:50px">
+           </lord-icon>  KL University
+          <script src="https://cdn.lordicon.com/bhenfmcm.js"></script>
+          <lord-icon
+              src="https://cdn.lordicon.com/hqrgkqvs.json"
+              trigger="hover"
+              colors="outline:#121331,primary:#f28ba8,secondary:#ebe6ef"
+              style="width:50px;height:50px">
+          </lord-icon>Full Stack Developer & DevOps<br>
+<br><br>
+<span>Greetings ! Welcome to my Portfolio website.
+<br>I am pursuing my 3rd year in B.Tech CSE.
+<br>Google Developer Student Club Android Dev Leader.
+<br>I'm interested in developing functional websites.
+<br>My goal is to become a professional DevOps Engineer.</span>
+</p>
+<div class="flexbox-item flexbox-item3">
+
+<button class="resbutton" id="resbutton">
+<span class="resbutton__text">RESUME</span>
+<span class="resbutton__icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 35 35" id="bdd05811-e15d-428c-bb53-8661459f9307" data-name="Layer 2" class="svg"><path d="M17.5,22.131a1.249,1.249,0,0,1-1.25-1.25V2.187a1.25,1.25,0,0,1,2.5,0V20.881A1.25,1.25,0,0,1,17.5,22.131Z"></path><path d="M17.5,22.693a3.189,3.189,0,0,1-2.262-.936L8.487,15.006a1.249,1.249,0,0,1,1.767-1.767l6.751,6.751a.7.7,0,0,0,.99,0l6.751-6.751a1.25,1.25,0,0,1,1.768,1.767l-6.752,6.751A3.191,3.191,0,0,1,17.5,22.693Z"></path><path d="M31.436,34.063H3.564A3.318,3.318,0,0,1,.25,30.749V22.011a1.25,1.25,0,0,1,2.5,0v8.738a.815.815,0,0,0,.814.814H31.436a.815.815,0,0,0,.814-.814V22.011a1.25,1.25,0,1,1,2.5,0v8.738A3.318,3.318,0,0,1,31.436,34.063Z"></path></svg></span>
+</button>
+
+
+    <button class="letsgo" id="letsgoButton">
+        LETS GO!
+        <svg fill="currentColor" viewBox="0 0 24 24" class="icon">
+            <path clip-rule="evenodd" d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zm4.28 10.28a.75.75 0 000-1.06l-3-3a.75.75 0 10-1.06 1.06l1.72 1.72H8.25a.75.75 0 000 1.5h5.69l-1.72 1.72a.75.75 0 101.06 1.06l3-3z" fill-rule="evenodd"></path>
+        </svg>
+    </button>
+
+    <a href="ContactMe/" class="contact-button">Contact Me</a>
+    <script>
+      document.getElementById('downloadButton').addEventListener('click', function() {
+          window.location.href = '{% url "download_pdf" %}';
+      });
+    </script>
+    <script>
+        document.getElementById("letsgoButton").addEventListener("click", function() {
+            window.location.href = "/Main";
+        });
+    </script>
+<script>
+    document.getElementById("resbutton").addEventListener("click", function() {
+        window.location.href = "/download-pdf";
+    });
+</script>
+</div>
+      </div>
+    </div>
+</body>
+</html>
