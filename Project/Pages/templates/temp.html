@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+    <title>Resume</title>
+        <link rel="icon" type="image/svg+xml" href="{% static './images/AS.png' %}">
+    <style>
+        body {
+            display: grid;
+            place-items: center;
+            min-height: 100vh;
+            font-family: 'Roboto Mono', sans-serif;
+        }
+
+        .error-message {
+            background-color: #f44336;
+            color: white;
+            padding: 25px;
+            border-radius: 5px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="error-message">
+        You are not authorized to download this.
+    </div>
+</body>
+</html>

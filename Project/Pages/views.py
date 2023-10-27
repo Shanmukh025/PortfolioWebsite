@@ -2,7 +2,6 @@ from django.shortcuts import render, HttpResponse
 from .models import Contact
 from django.http import FileResponse
 from django.conf import settings
-import os
 
 
 # Create your views here.
